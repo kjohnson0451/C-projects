@@ -18,6 +18,11 @@ int main(int argc, char *argv[]) {
   short three = 3;
   short four = 4;
 
+  if (q.empty())
+    std::cout << "Queue is empty.\n\n";
+  else
+    std::cout << "Queue is not empty.\n\n";
+
   q.push(&one);
   std::cout << "'One' added to queue.\nFront of the queue is: " << *(q.front()) << "\n"
             << "Back of the queue is: " << *(q.back()) << "\n\n";
@@ -42,6 +47,11 @@ int main(int argc, char *argv[]) {
   q.pop();
   std::cout << "Queue popped.\nFront of the queue is: " << *(q.front()) << "\n"
             << "Back of the queue is: " << *(q.back()) << "\n\n";
+
+  if (q.empty())
+    std::cout << "Queue is empty.\n\n";
+  else
+    std::cout << "Queue is not empty.\n\n";
 
   return 0;
 }
