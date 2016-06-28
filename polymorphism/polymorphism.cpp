@@ -14,9 +14,10 @@ protected:
   int width, height;
 public:
   Polygon (int a, int b) : width(a), height(b) {}
-  virtual int area (void) =0;
-  void printarea()
-  { cout << this->area() << '\n'; }
+  virtual int area (void) = 0;
+  void printarea() {
+    cout << this->area() << '\n';
+  }
 };
 
 class Rectangle: public Polygon {

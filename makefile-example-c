@@ -1,0 +1,11 @@
+all: main
+	rm -f *.o
+
+main: main.o
+	gcc main.o main
+
+main.o: main.c
+	gcc -c main.c
+
+clean:
+	rm -f main

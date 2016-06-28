@@ -1,0 +1,14 @@
+all: main
+	rm -f *.o
+
+main: main.o file.o
+	g++ main.o file.o -o main
+
+main.o: main.cpp
+	g++ -c main.cpp
+
+file.o: file.cpp
+	g++ -c file.cpp
+
+clean:
+	rm -f main
